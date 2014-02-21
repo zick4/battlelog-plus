@@ -35,6 +35,9 @@ BBLog.handle("add.plugin", {
     *    For example: If you add a new function to your addon, always pass the "instance" object
     */
     init : function(plugin){
+        $('#warsaw-stats').live('change', function () {
+            console.log('zmiana');
+        });
         plugin.hideComment();
     },
 
