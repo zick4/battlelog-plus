@@ -35,14 +35,12 @@ BBLog.handle("add.plugin", {
     *    For example: If you add a new function to your addon, always pass the "instance" object
     */
     init : function(plugin){
-//        $('#warsaw-stats').bind('DOMNodeInserted', function(event) {
-//            plugin.hideComment();
-//       });
         plugin.hideComment();
+        plugin.changeLabels();
     },
 
-    domchange : function(plugin){
-//        plugin.hideComment();
+    changeLabels: function() {
+        $('.profile-stats-tab.battlepacks a').text('Pakiety');
     },
 
     hideComment: function() {
