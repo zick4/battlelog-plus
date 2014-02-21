@@ -35,18 +35,19 @@ BBLog.handle("add.plugin", {
     *    For example: If you add a new function to your addon, always pass the "instance" object
     */
     init : function(plugin){
-        $('#warsaw-stats').bind('DOMNodeInserted', function(event) {
-            plugin.hideComment();
-       });
-//        plugin.hideComment();
+//        $('#warsaw-stats').bind('DOMNodeInserted', function(event) {
+//            plugin.hideComment();
+//       });
+        plugin.hideComment();
     },
 
     domchange : function(plugin){
-//        plugin.hideComment();
+        plugin.hideComment();
     },
 
     hideComment: function() {
-        $('.bblog-local-comment').hide();
+        document.styleSheets[0].addRule('.bblog-local-comment', 'display: none', -1);
+//        $('.bblog-local-comment').hide();
     },
 
 
