@@ -36,13 +36,13 @@ BBLog.handle("add.plugin", {
     */
     init : function(plugin){
         $('#warsaw-stats').bind('DOMNodeInserted', function(event) {
-            console.log('zmiana');
+            plugin.hideComment();
        });
-        plugin.hideComment();
+//        plugin.hideComment();
     },
 
     domchange : function(plugin){
-        plugin.hideComment();
+//        plugin.hideComment();
     },
 
     hideComment: function() {
