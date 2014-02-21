@@ -46,8 +46,18 @@ BBLog.handle("add.plugin", {
     },
 
     hideComment: function() {
-        document.styleSheets[0].addRule('.bblog-local-comment', 'display: none', -1);
-//        $('.bblog-local-comment').hide();
+        var css = '.bblog-local-comment{ display: none}',
+            head = document.head || document.getElementsByTagName('head')[0],
+            style = document.createElement('style');
+
+        style.type = 'text/css';
+        if (style.styleSheet){
+          style.styleSheet.cssText = css;
+        } else {
+          style.appendChild(document.createTextNode(css));
+        }
+
+        head.appendChild(style);
     },
 
 
