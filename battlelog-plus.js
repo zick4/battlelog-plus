@@ -42,7 +42,7 @@ BBLog.handle("add.plugin", {
     },
 
     domchange : function(plugin){
-        plugin.hideComment();
+//        plugin.hideComment();
     },
 
     hideComment: function() {
